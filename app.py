@@ -67,6 +67,8 @@ def main():
     #giving a title
     
     st.title("Diabetes Prediction Web App")
+    st.write("Please enter each value and press Enter before moving on to the next input field.")
+
     
     #working on taking the input
     #remember that the sequence of the input data should be same as that of the dataset
@@ -96,7 +98,11 @@ def main():
             st.success('The person is not diabetic')
         else:
                 st.success('The person is diabetic')
-        st.title('following is visualization that explain which features played how much role in predicting this result')
+        st.title("Feature Influence on Diabetes Prediction")
+        st.write("The chart below shows how much each feature affected the prediction for this person. ")
+        st.write("Green bars indicate features that pushed the prediction toward being Diabetic, ")
+        st.write("while red bars show features that pushed it toward Not Diabetic.")
+
         # Show LIME explanation graph
         original_input = np.array([
             float(Pregnancies), float(Glucose), float(BloodPressure),
@@ -112,4 +118,5 @@ def main():
    
     
 if __name__ == '__main__':
+
     main()
