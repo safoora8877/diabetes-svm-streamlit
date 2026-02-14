@@ -77,7 +77,7 @@ def main():
   
     Pregnancies = st.text_input('Number of Pregenancies')
     Glucose= st.text_input('Blood Glucose level')
-    BloodPressure = st.text_input('Blood Pressure')
+    BloodPressure = st.text_input('Blood Pressure (diastolic only)')
     SkinThickness = st.text_input('Thickness of the skin')
     Insulin= st.text_input('Blood Insulin Level')
     BMI=st.text_input('Body Mass Index (BMI)')
@@ -120,3 +120,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
